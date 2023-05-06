@@ -3519,6 +3519,7 @@ void cmVisualStudio10TargetGenerator::WriteClOptions(
       Elem e3(e2, "DebugInformationFormat");
       e3.SetHasElements();
     }
+    e2.Element("MultiProcessorCompilation", "true");
 
     // Specify the compiler program database file if configured.
     std::string pdb = this->GeneratorTarget->GetCompilePDBPath(configName);
